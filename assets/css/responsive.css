@@ -1,0 +1,148 @@
+/* ======================================= MEDIA QUERY FOR 1024PX SCREEN ==================== */
+@media screen and (max-width: 1024px ) {
+
+}
+/* ========================================== MEDIA QUERY FOR 992PX SCREEN ================== */
+@media screen and (max-width: 992px ) {
+    .col-md-3{
+        flex-basis: 30%;
+    }
+    /* ========================== START WORK SECTION2 ===================== */
+    .after-content::after {
+        top: 35%;
+        left: 40%;
+        width: 100%;
+        transform: rotate(10deg);
+    }
+    .col-sm-6 {
+        flex-basis: 22%;
+        width: 22%;
+      }
+      /* ============================== RESPONSIVE MENU ========================== */
+      .navigation nav {
+        position: fixed;
+        z-index: 99;
+        background: rgb(47, 80, 172);
+        height: 100%;
+        min-height: 100vh;
+        right: -100%;
+        top: 0;
+        width: 300px;
+        padding: 30px;
+        overflow-y: scroll;
+        transition:all .5s ease;
+      }
+      .navigation  nav ul li {
+        display: block;
+        margin:30px 0;
+      }
+      .sticky .navigation nav ul > li a:not(.navigation nav ul ul li a) {
+        color: #fff;
+      }
+      .mega-content {
+        flex-direction: column;
+      }
+      .mega-content .mega-links li {
+        margin: 0;
+      }
+      .mega-box {
+        top: 223px;
+      }
+      .mega-row {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 30px;
+      }
+      .mega-row:last-child {
+        border-bottom: none;
+      }
+      .menu-btn{
+          display: inline-block;
+      }
+      .menu-btn:last-child {
+        margin-left: 10px;
+    }
+      #check:checked ~ .navigation nav {
+        right: 0;
+      }
+}
+/* ======================================= MEDIA QUERY FOR 800PX SCREEN ========================== */
+@media  screen and (max-width: 800px ) {
+
+}
+/* ====================================== MEDIA QUERY FOR 768PX SCREEN =============================== */
+@media screen and (max-width: 768px) {
+    .row{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .row2{
+        flex-direction: row;
+    }
+    .col-md-4{
+        width: 95%;
+        margin:auto;
+    }
+    .col-md-6 {
+        width: 100%;
+    }
+    .col-sm-6 {
+        flex-basis: 45%;
+        width: 45%;
+    }
+    .main-left{
+        margin-top: 50px;
+    }
+    .main-right img {
+        margin-top: 0;
+        width:100%;
+    }
+    /* ======================= BRAND SECTION =================== */
+    .brand-logo{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .brand-logo li {
+        flex-basis: 40%;
+        text-align: center;
+        margin: 10px;
+    }
+    /* ========================= WORK SECTION ==================== */
+    .col-md-3{
+        width: 100%;
+    }
+    /* ============================== WORK SECTION2 ============= */
+    .after-content::after{
+        display: none;
+    }
+    /* ======================= ABOUT AREA =============== */
+    .about-right{
+        margin-top: 30px;
+    }
+}
+/* ======================================= MEDIA QUERY FOR SMALL SCREEN ======================= */
+@media screen and  (max-width: 600px ) {
+    /* ========================= ABOUT AREA =============== */
+    .hover-text a{
+        margin-top: 80%;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .row2{
+        flex-direction: column;
+    }
+}
+/* ====================================== MEDIA QUERY FOR X-SMALL SCREEN =================== */
+@media screen and (max-width: 480px ) {
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+      .header-icons span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 5px;
+      }
+}

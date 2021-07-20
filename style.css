@@ -1,0 +1,828 @@
+/* 
+    Template Name : Landrick Web Template;
+    Author        : Mohammadullah Jewel;
+    Author URL    : ;
+
+*/
+
+*{margin:0px; padding:0px;box-sizing: border-box;}
+body{font-family: Verdana, Geneva, Tahoma, sans-serif;}
+a{text-decoration: none;}
+li {list-style: none;}
+.container{width:90%; margin:auto;}
+.sec-padding{padding: 30px 0; transition: .5s;}
+.col-md-4{width: 31%; margin:auto;}
+/* ========================= ANIMATED ICON ============== */
+.animated-icon {
+  position: fixed;
+  left: 0;
+  top: 30%;
+  background: #fff;
+  z-index: 10;
+  display: block;
+  padding: 7px 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 2px 2px 8px #827b7b;
+  cursor: pointer;
+}
+.animated-btn svg{
+  animation: animated-icon;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+@keyframes animated-icon {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/* ========================= START HEADR AREA  ======================== */
+header {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 1px;
+    z-index: 9999;
+    transition:.5s;
+  }
+  /* ---------- STYLE FOR STICKY MENU -------- */
+  .sticky .sec-padding {
+    padding: 15px 0;
+  }
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 1px 1px 8px #000;
+  }
+  .sticky .navigation nav ul > li a:not(.navigation nav ul ul li a) {
+    color: #2552d4;
+  }
+  .sticky .mega-box{
+    top:70px;
+  }
+  .sticky .logo h3 {
+    color: #2552d4;
+  }
+  .sticky .header-icons span {
+    color: #fff;
+    background: #2552d4;
+  }
+  .sticky .menu-btn {
+    background: #2552d4;
+    color: #fff;
+  }
+  /* -------------------- STICKY MENU STYLE END ------ */
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation .logo {
+    font-size: 25px;
+  }
+  .logo h3 {
+    /* color: #5b85c8; */
+    font-size: 23px;
+    color:#fff;
+  }
+  .navigation nav li {
+    display: inline-block;
+    margin: 0px 20px;
+  }
+  .navigation nav li a {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+    position: relative;
+    letter-spacing: 1px;
+  }
+  .navigation nav ul li a:hover {
+    color: #ccc;
+  }
+  .navigation nav ul li a:hover span svg {
+    transform: rotate(90deg);
+  }
+  .navigation nav li a:after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    content: '';
+    transition: .3s;
+    background: #b2c7e9;
+  }
+  .navigation nav li a:hover::after {
+    width: 100%;
+  }
+  .header-icons span {
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #4d4d4d;
+    font-size: 20px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 1px 1px 5px #959595;
+    cursor: pointer;
+    transition: .3s all ease;
+  }
+  .header-icons span:hover {
+    background: #e8e7e7d1;
+  }
+  .nav-btn {
+    font-size: 25px;
+    color: #fff;
+    transition: .3s;
+  }
+  .nav-btn:hover {
+    color: #ccc;
+  }
+  /* ================================== MEGA MENU START ====================== */
+  .megaBox:hover .mega-box{
+    visibility: visible;
+    opacity: 1;
+  }
+  .mega-box {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    top: 80px;
+    padding: 0 5%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+  }
+  .mega-content {
+    background: rgba(7, 73, 157, 0.8);
+    padding: 30px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 10px #ccc;
+    border-radius: 5px;
+  }
+  .mega-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .mega-links li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
+  .mega-row {
+    width: calc(100%);
+    border-right: 1px solid #ccc;
+  }
+  .mega-row:last-child {
+    border-right: none;
+  }
+  .menu-btn {
+    background: #fff;
+    color: #4d4d4d;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 23px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+  }
+  .menu-btn:hover {
+    background: #4c8fd7;
+    color: #fff;
+  }
+  #check{
+    display: none;
+  }
+  label #open, label #cancel {
+    cursor: pointer;
+  }
+ 
+
+  /* ================================== MEGA MENU END ====================== */
+/* ========================= END HEADR AREA ======================== */
+/* ========================= START MAIN SECTION  ======================== */
+.main-section{
+  position: relative;
+  background-image: url('assets/image/bg2.png');
+  background-color: rgba(25, 110, 248, 0.8);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.col-md-6 {
+  width: 48%;
+  margin: auto;
+}
+.main-left h3 {
+  font-size: 23px;
+  font-weight: 500;
+  color: #e1e1e1;
+  margin: 22px 0;
+}
+.main-left h1 {
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+.main-left p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #f0eded;
+  font-weight: 500;
+  margin: 25px 0;
+}
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: .4s;
+  box-shadow: 1px 1px 6px #262626;
+}
+.btn:hover {
+  background: #ccc;
+}
+.main-right {
+  text-align: center;
+}
+.main-right img {
+  width: 400px;
+  min-width: 300px;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: -5px;
+}
+/* ========================= END MAIN SECTION ======================== */
+/* ======================= START BRAND  SECTIN ======================= */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+/* ======================= END BRAND  SECTIN ======================= */
+/* ======================= START WORK  SECTIN ======================= */
+.work-section{
+}
+.work-section1{
+  text-align: center;
+  padding: 60px 0;
+}
+.work-section1 a {
+  font-size: 14px;
+  color: #343495;
+}
+.work-section1 h2{
+  font-size:30px;
+  font-weight: 500;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+.work-section1 p{
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: 300;
+  padding: 0 20px;
+}
+.link {
+	font-weight: 600;
+	color: #3131b7;
+}
+.col-md-3 {
+  flex-basis: 22%;
+  text-align: center;
+  margin: 1.5%;
+}
+.text-box {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  transition: .3s;
+}
+.text-box:hover{
+  background:#3b81ee;
+}
+.text-box svg {
+  font-size: 35px;
+  margin: 20px 0;
+  color: #046cc8;
+}
+.text-box:hover svg{
+  color: #ddd;
+}
+.text-box h3 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 1px;
+  color: #484848;
+}
+.text-box:hover h3{
+  color:#ffffff;
+}
+.text-box p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #a8a8a8;
+  padding: 0 10px;
+  padding-bottom: 22px;
+}
+.text-box:hover p{
+  color:#ddd;
+}
+.more-btn {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+.btn.see-more {
+  background: #5f5fee;
+  color: #fff;
+}
+.btn.see-more:hover {
+  background: #4949db;
+}
+/* ======================= END WORK  SECTION ======================= */
+/* ========================= START ABOUT AREA =================== */
+.about-area {
+
+}
+.about-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image{
+  margin:10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: background .8s;
+}
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  transition:transform .4s;
+}
+.hover-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  z-index: 222;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.hover-text a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  transition: .3s;
+  margin-top: 90%;
+}
+.hover-text a:hover {
+  color: #5c5cdf;
+}
+.hover-text p {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+}
+.image:hover .hover-text {
+  display: block;
+}
+.about-right {
+  padding-left: 15px;
+}
+.about-right .about-text-box h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.about-right .about-text-box p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.about-right .about-text-box {
+  margin-bottom: 30px;
+}
+/* ====================== Features ================ */
+.features {
+  padding: 20px 0;
+}
+.features li {
+  position: relative;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+.features li span {
+  color: #2552d4;
+  font-size: 15px;
+  margin: 10px;
+}
+.circle-btn {
+  display: inline-block;
+  margin: 20px;
+  background: #6d6dd9;
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+  transition: .3s;
+}
+.circle-btn:hover {
+  background: #3b37a8;
+}
+.image:hover img {
+  transform: scale(1.2) rotate(10deg);
+}
+/* ========================= END ABOUT AREA =================== */
+/* ========================= START PROGRESS SECTION =================== */
+.progress-bar-box{
+  background-color: #2552d4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.box p {
+  font-size: 17px;
+  margin: 10px 0;
+  display: block;
+  color: #f3f3f3;
+}
+.progress {
+  width: 100%;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 3px 0;
+  margin: 20px 0;
+}
+.progress-bar {
+  width: 0;
+  background: #000;
+  border-radius: 10px;
+  color: #fff;
+  height: 6px;
+  margin-left: 7px;
+  position: relative;
+  -webkit-transition:.4s ease;
+  transition:1.5s ease;
+}
+.progress-bar span {
+  position: absolute;
+  right: 0;
+  top: -23px;
+}
+/* ========================= END PROGRESS SECTION =================== */
+/* ========================= START COUNTDOWN SECTION =================== */
+.countdown-area {
+	background: #f4f4f4;
+}
+.count-box img {
+  width: 70px;
+  height: auto;
+  margin: 20px 0;
+  text-align: center;
+}
+.count-box h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.count-box h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6f6f6f;
+}
+/* ========================= END COUNTDOWN SECTION =================== */
+/* ========================= START WORK SECTION2 =================== */
+.mt1 {
+  margin-top: 80px;
+}
+.mt2 {
+  margin-top: 100px;
+}
+.work-content-box {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+.work-content-box svg {
+  font-size: 35px;
+  margin: 20px;
+  color: #2c35bd;
+}
+.work-content-box h3 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 0;
+  color: #333;
+}
+.work-content-box p {
+  font-size: 14px;
+  letter-spacing: .4px;
+  line-height: 20px;
+  color: #757575;
+  padding:0 15px;
+}
+.after-content::after {
+	position: absolute;
+	content: url('assets/image/process.png');
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 54%;
+  transform: rotate(5deg);
+}
+/* ========================= END WORK SECTION2 =================== */
+/* ========================= START PORTFOLIO SECTION =================== */
+.port-box {
+  margin: 15px;
+  position: relative;
+}
+.port-box ul {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  transition: .4s;
+  visibility: hidden;
+  opacity: 0;
+}
+.port-box ul li a {
+  border: 1px solid #fff;
+  margin: 5px;
+  font-size: 20px;
+  height: 35px;
+  width: 35px;
+  display: block;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  transition: .4s;
+}
+.port-box ul li a:hover {
+  color: rgb(36, 143, 230);
+  border: 1px solid rgb(36, 143, 230);
+}
+.port-box:hover.port-box img{
+  filter: blur(2px);
+}
+.port-box:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+.port-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px;
+  transition:.4s;
+}
+.port-box h4 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 4px 0;
+  color: #484848;
+}
+.port-box p {
+  font-size: 14px;
+  color: #757575;
+}
+/* ========================= END PORTFOLIO SECTION =================== */
+/* ========================= START BLOG SECTION =================== */
+.blog-area {
+	padding: 100px 0;
+	background-color: #f2f0f0;
+}
+.blog-content h5 {
+  margin: 20px 0;
+  color: #11499f;
+  font-size: 18px;
+}
+.blog-content h2 {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #333;
+}
+.blog-content p {
+  margin-top: 40px;
+  line-height: 22px;
+  font-size: 16px;
+  color:#777;
+}
+.blog-single-box {
+  overflow: hidden;
+  background: #fff;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #ddd;
+  -webkit-transition: .4s;
+  transition: .4s;
+  margin-top: 30px;
+}
+.blog-single-box img {
+  width: 100%;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.blog-single-box h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: #535353;
+  padding: 0 20px;
+}
+.blog-content-box {
+  margin: 40px 0;
+}
+.react span {
+  font-size: 15px;
+  padding-right: 12px;
+  color: #464646;
+  cursor: pointer;
+}
+.react a {
+  text-align: right;
+  float: right;
+  overflow: hidden;
+  display: inline-block;
+  color: #646464;
+  transition: .3s;
+}
+.react a:hover {
+  color: #313131;
+}
+.react {
+  padding: 0 20px;
+}
+.blog-single-box:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+/* ========================= END BLOG SECTION =================== */
+/* ========================= START FOOTER SECTION =================== */
+.footer-area {
+  background-color: #3e3e7d;
+}
+.footer-row {
+  align-items: flex-start;
+}
+.footer-content {
+  padding: 10px 0;
+  text-align: left;
+}
+.footer-content h2 {
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: #dbdbdb;
+}
+.footer-content p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #979797;
+  padding-bottom: 30px;
+}
+.footer-content .social-icon span {
+  margin: 3px;
+  border: 1px solid #2828b5;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 7px;
+  color: #777;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.footer-content .social-icon span:hover {
+  border: 1px solid #5b5bc8;
+  color: #fff;
+  background: #5b5bc8;
+}
+.footer-content h3 {
+  font-size: 23px;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+.footer-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-content ul li a {
+  display: block;
+  line-height: 28px;
+  color: #b5b5b5;
+  transition: .3s;
+  font-size: 14px;
+}
+.footer-content ul li a:hover {
+  color: #000;
+}
+.footer-content form label {
+  font-size: 16px;
+  color: #646464;
+}
+.footer-content form label span {
+  color: red;
+  font-size: 18px;
+  display: inline-block;
+}
+.form-box {
+  padding: 15px 0;
+  position: relative;
+}
+.form-box span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  color: #f0f0f0;
+}
+.footer-content form input {
+  width: 100%;
+  height: 33px;
+  padding: 0 30px;
+  color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  background: #88f;
+}
+.footer-content form input[type='submit'] {
+  color: blue;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border-bottom-width: 3px;
+  border-bottom-color: blue;
+  cursor: pointer;
+  height: 40px;
+}
+.footer-area hr {
+  margin: 15px 0;
+  border: 0.4px slid #ccc;
+}
+.footer-bottom p {
+  font-size: 13px;
+  color: #a8a8a8;
+  text-align: ;
+}
+.footer-bottom p span {
+  color: red;
+}
+.footer-bottom .flags {
+  text-align: right;
+}
+.footer-bottom .flags a img {
+  width: 30px;
+  -webkit-transition: .3s;
+  filter: grayscale(100%);
+}
+.footer-bottom .flags a img:hover {
+  filter: grayscale(0);
+}
+/* ========================= END FOOTER SECTION =================== */
